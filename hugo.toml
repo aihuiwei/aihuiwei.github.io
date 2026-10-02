@@ -16,7 +16,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
   cv = "/files/Aihui_Wei_CV.pdf"
   cv_updated = "September 2026"
   headshot = "/img/headshot.jpg"
-  description = "Aihui Wei is a Ph.D. candidate in Economics at the CUNY Graduate Center, on the 2026–2027 job market. Research on central bank communication, financial economics, monetary economics, market microstructure, and large language models."
+  description = "Aihui Wei is a Ph.D. candidate in Economics at the CUNY Graduate Center, on the 2026–2027 job market. Research on central bank communication: financial economics, monetary economics, market microstructure, and AI/LLMs."
 
 [[menus.main]]
   name = "Home"
