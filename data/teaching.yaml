@@ -1,0 +1,6 @@
+instructor:
+  - { course: "Business Statistics", school: "Baruch College, CUNY", years: "2023–2025" }
+  - { course: "Introduction to Macroeconomics", school: "Baruch College, CUNY", years: "2022–2023" }
+assistant:
+  - { course: "Machine Learning for Trading", school: "Georgia Institute of Technology", years: "2024–2025" }
+  - { course: "Principles of Macroeconomics", school: "The City College of New York, CUNY", years: "2022–2023" }

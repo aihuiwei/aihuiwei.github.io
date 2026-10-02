@@ -1,0 +1,19 @@
+# scheduled: true marks a talk that has not happened yet (shown with a "scheduled" tag)
+- year: 2027
+  items:
+    - { name: "AFA Ph.D. Student Poster Session", place: "Washington, DC, USA", scheduled: true }
+- year: 2026
+  items:
+    - { name: "LACEA–LAMES of the Econometric Society", place: "Lima, Peru", scheduled: true }
+    - { name: "FMA Annual Meeting", place: "Tampa, USA", scheduled: true }
+    - { name: "AI in Finance Conference", place: "Montréal, Canada", scheduled: true }
+    - { name: "Money, Macro and Finance (MMF) Annual Conference", place: "Lancaster, UK" }
+    - { name: "North American Summer Meeting of the Econometric Society", place: "Atlanta, USA" }
+    - { name: "IAAE Annual Conference", place: "Lisbon, Portugal" }
+    - { name: "Spring Midwest Macroeconomics Meeting", place: "Milwaukee, USA" }
+    - { name: "AASF AIX Summit East, Ph.D. Poster", place: "New York, USA" }
+    - { name: "Early Research Initiative Conference, CUNY Graduate Center", place: "New York, USA" }
+    - { name: "Inter-American Development Bank", place: "Washington, DC, USA" }
+- year: 2025
+  items:
+    - { name: "International Monetary Fund", place: "Washington, DC, USA" }

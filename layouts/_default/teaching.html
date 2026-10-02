@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="wrap page">
+  <h1 class="page-title">Teaching</h1>
+  <section class="block">
+    <h2>Instructor of record</h2>
+    <ul class="rows">
+      {{ range site.Data.teaching.instructor }}
+        <li><div><span class="row-main">{{ .course }}</span><span class="row-sub">{{ .school }}</span></div><span class="row-year">{{ .years }}</span></li>
+      {{ end }}
+    </ul>
+  </section>
+  <section class="block">
+    <h2>Teaching assistant</h2>
+    <ul class="rows">
+      {{ range site.Data.teaching.assistant }}
+        <li><div><span class="row-main">{{ .course }}</span><span class="row-sub">{{ .school }}</span></div><span class="row-year">{{ .years }}</span></li>
+      {{ end }}
+    </ul>
+  </section>
+</div>
+{{ end }}

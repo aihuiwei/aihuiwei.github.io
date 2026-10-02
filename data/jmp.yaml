@@ -1,0 +1,12 @@
+title: "Fedspeak, LLM-Derived Signals, and High-Frequency Trading"
+links:
+  - name: "SSRN"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7479619"
+abstract: >-
+  This paper examines how Federal Reserve communication shapes financial markets in real time.
+  Using large language models and semantic divergence measures on a comprehensive corpus of
+  FOMC statements, minutes, and press conferences, I construct novel communication shocks
+  that capture shifts in tone, forward guidance, and informational content. High-frequency event
+  studies with tick-level futures data show that these LLM-based shocks generate immediate and
+  economically significant responses in Treasury yields, interest rate futures, fixed-income volatility,
+  and term premia across the yield curve.

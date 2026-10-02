@@ -1,0 +1,36 @@
+baseURL = "https://aihuiwei.github.io/"
+languageCode = "en-us"
+title = "Aihui Wei"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+[params]
+  name = "Aihui Wei"
+  name_zh = ""                # optional: Chinese name shown next to the English name
+  role = "Ph.D. Candidate in Economics"
+  affiliation = "The Graduate Center, City University of New York"
+  job_market = "I am on the 2026–2027 job market."
+  email = "awei@gc.cuny.edu"
+  linkedin = "https://www.linkedin.com/in/aihui-w-602b89380/"
+  github = ""                 # leave empty to hide; https://github.com/aihuiwei
+  ssrn = "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=13217388"
+  cv = "/files/Aihui_Wei_CV.pdf"
+  cv_updated = "September 2026"
+  headshot = "/img/headshot.jpg"
+  description = "Aihui Wei is a Ph.D. candidate in Economics at the CUNY Graduate Center, on the 2026–2027 job market. Research on central bank communication, financial economics, monetary economics, market microstructure, and large language models."
+
+[[menus.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menus.main]]
+  name = "Research"
+  url = "/research/"
+  weight = 2
+[[menus.main]]
+  name = "Teaching"
+  url = "/teaching/"
+  weight = 3
+[[menus.main]]
+  name = "CV"
+  url = "/cv/"
+  weight = 4

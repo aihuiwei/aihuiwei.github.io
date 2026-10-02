@@ -1,0 +1,32 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-name" href="{{ "/" | relURL }}">{{ site.Params.name }}</a>
+    <nav aria-label="Main">
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+        {{ $active := or (and $current.IsHome (eq .URL "/")) (eq (strings.TrimSuffix "/" $current.RelPermalink) (strings.TrimSuffix "/" .URL)) }}
+        <a href="{{ .URL | relURL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>
+      </button>
+    </nav>
+  </div>
+  <script>
+  (function () {
+    var root = document.documentElement, btn = document.currentScript.parentNode.querySelector('.theme-toggle');
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    function isDark() { var t = root.getAttribute('data-theme'); return t ? t === 'dark' : mq.matches; }
+    function sync() { btn.setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode'); }
+    btn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      sync();
+    });
+    mq.addEventListener && mq.addEventListener('change', sync);
+    sync();
+  })();
+  </script>
+</header>
