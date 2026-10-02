@@ -73,7 +73,7 @@ nav { align-items: center; }
 .hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 3rem; padding-top: 4.5rem; }
 .person { color: var(--brand); font-size: var(--name-size); font-weight: 500; line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 1rem; }
 .name-zh { font-weight: 400; color: var(--muted); font-size: 0.55em; letter-spacing: 0.05em; }
-.role { margin: 0; color: var(--muted); font-size: 1.25rem; line-height: 1.5; }
+.role { margin: 0; color: var(--muted); font-size: 1.15rem; line-height: 1.4; }
 .market { margin: 1.1rem 0 0; font-family: var(--sans); font-size: 0.9375rem; font-weight: 500; color: var(--accent); }
 /* photo top lines up with the role line, just under the name */
 .headshot { align-self: flex-start; margin-top: calc(var(--name-size) * 1.05 + 1.3rem); width: 260px; height: 325px; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
