@@ -111,8 +111,6 @@ nav { align-items: center; }
 .tickfig figcaption { margin-top: 0.5rem; font-family: var(--sans); font-size: 0.8125rem; color: var(--muted); }
 
 .intro { margin-top: 2rem; }
-/* the Fields line: compact sans so it fits on one line; non-breaking spaces keep each field whole when it must wrap */
-.intro p:has(> strong:first-child) { font-family: var(--sans); font-size: 0.9375rem; }
 .prose p { margin: 0 0 1.1rem; }
 .contact-links { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.4rem; font-family: var(--sans); font-size: 0.9375rem; }
 
