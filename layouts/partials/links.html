@@ -1,6 +1,5 @@
 <ul class="contact-links">
   <li><a href="mailto:{{ site.Params.email }}">Email</a></li>
-  <li><a href="{{ site.Params.cv | relURL }}">CV (PDF)</a></li>
   {{ with site.Params.linkedin }}<li><a href="{{ . }}">LinkedIn</a></li>{{ end }}
   {{ with site.Params.ssrn }}<li><a href="{{ . }}">SSRN</a></li>{{ end }}
   {{ with site.Params.github }}<li><a href="{{ . }}">GitHub</a></li>{{ end }}
