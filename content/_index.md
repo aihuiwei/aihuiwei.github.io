@@ -1,7 +1,7 @@
 ---
 title: "Aihui Wei"
 ---
-I study how central bank communication moves financial markets. My work combines large language models with high-frequency event-study methods to measure how policy communication affects asset prices and trading activity. I am advised by [Sebastiano Manzan](https://smanzan.github.io/).
+I study how central bank communication moves financial markets. My work combines large language models with high-frequency event-study methods to measure how policy communication affects asset prices and trading activity.
 
 **Fields:** Financial Economics · Monetary Economics · Market Microstructure · AI/LLMs
 
