@@ -81,7 +81,7 @@ nav { align-items: center; }
 .monogram { display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-size: 3.2rem; font-weight: 500; letter-spacing: 0.02em; }
 
 /* one-line JMP on the home page */
-.jmp-line { margin: 0.75rem 0 0; padding: 0.8rem 1.1rem; background: var(--card); border-radius: 6px; font-size: 1.125rem; max-width: 34rem; line-height: 1.45; color: var(--muted); }
+.jmp-line { margin: 2.75rem 0 0; padding: 0.8rem 1.1rem; background: var(--card); border-radius: 6px; font-size: 1.125rem; line-height: 1.45; color: var(--muted); }
 .jmp-line-title { font-style: italic; color: var(--ink); text-decoration-color: var(--rule); }
 .jmp-line-title:hover { text-decoration-color: var(--accent); }
 .jmp-line-link { font-family: var(--sans); font-size: 0.875rem; font-weight: 500; white-space: nowrap; }
