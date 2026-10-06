@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="wrap page">
+  <h1 class="page-title">Research</h1>
+
+  <section class="block">{{ partial "jmp.html" (dict "full" true) }}</section>
+
+  <section class="block">
+    <h2>Working papers</h2>
+    <ul class="papers">
+      {{ range site.Data.papers.working }}
+        <li>
+          <span class="paper-title">{{ if .url }}<a href="{{ .url | relURL }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</span>
+          {{ with .note }}<span class="paper-meta">{{ . }}</span>{{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Work in progress</h2>
+    <ul class="papers">
+      {{ range site.Data.papers.progress }}
+        <li><span class="paper-title">{{ .title }}</span>{{ with .note }}<span class="paper-meta">{{ . }}</span>{{ end }}</li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Presentations</h2>
+    {{ range site.Data.presentations }}
+      <div class="year-group">
+        <h3 class="year">{{ .year }}</h3>
+        <ul class="talks">
+          {{ range .items }}
+            <li>{{ .name }}<span class="place">, {{ .place }}</span>{{ if .scheduled }} <span class="tag">scheduled</span>{{ end }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </section>
+</div>
+{{ end }}

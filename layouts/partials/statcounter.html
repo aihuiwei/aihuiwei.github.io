@@ -1,0 +1,5 @@
+{{ with site.Params.statcounter }}
+<script>var sc_project={{ .project }}; var sc_invisible=1; var sc_security="{{ .security }}";</script>
+<script src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript><img src="https://c.statcounter.com/{{ .project }}/0/{{ .security }}/1/" alt="" width="1" height="1" style="position:absolute;left:-9999px" referrerpolicy="no-referrer-when-downgrade"></noscript>
+{{ end }}

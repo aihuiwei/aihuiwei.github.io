@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="hero wrap">
+  <div class="hero-text">
+    <h1 class="person">{{ site.Params.name }}{{ with site.Params.name_zh }} <span class="name-zh" lang="zh">{{ . }}</span>{{ end }}</h1>
+    <p class="role">{{ site.Params.role }}<br>{{ site.Params.affiliation }}</p>
+    <p class="market">{{ site.Params.job_market }}</p>
+    <div class="intro prose">
+      {{ .Content }}
+    </div>
+  </div>
+  {{ with site.Params.headshot }}
+    <img class="headshot" src="{{ . | relURL }}" alt="Portrait of {{ site.Params.name }}" width="260" height="325">
+  {{ else }}
+    <div class="headshot monogram" aria-hidden="true">AW</div>
+  {{ end }}
+</section>
+
+<div class="wrap">
+  {{ $j := site.Data.jmp }}
+  <p class="jmp-line"><strong class="jmp-line-label">Job Market Paper:</strong> <a class="jmp-line-title" href="{{ "/research/" | relURL }}">{{ $j.title }}</a>{{ range $j.links }}{{ if and .url (eq .name "SSRN") }} <a class="jmp-line-link" href="{{ .url }}">[SSRN]</a>{{ end }}{{ end }}</p>
+  {{ partial "tickline.html" . }}
+</div>
+{{ end }}

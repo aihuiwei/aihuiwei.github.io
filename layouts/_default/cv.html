@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{ $pdf := printf "%s?v=%d" (site.Params.cv | relURL) now.Unix }}
+<div class="wrap page">
+  <div class="cv-actions">
+    <a class="button button-lg" href="{{ $pdf }}" download>Download CV (PDF)</a>
+    <span class="muted">Updated {{ site.Params.cv_updated }}</span>
+  </div>
+</div>
+<div class="cv-embed-wrap">
+  <div class="cv-pages" id="cv-pages" data-src="{{ $pdf }}">
+    <p class="cv-fallback">Loading CV…</p>
+  </div>
+  <noscript><p class="cv-fallback"><a href="{{ $pdf }}">Open the CV (PDF)</a></p></noscript>
+</div>
+<script>
+(function () {
+  var box = document.getElementById('cv-pages');
+  var src = box.dataset.src;
+  function fail() {
+    box.innerHTML = '<p class="cv-fallback">The CV could not be displayed here. <a href="' + src + '">Open the PDF</a> instead.</p>';
+  }
+  // desktop: built-in PDF viewer; mobile: render pages with pdf.js
+  var mobile = window.matchMedia('(pointer: coarse)').matches || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (navigator.pdfViewerEnabled && !mobile) {
+    box.innerHTML = '<iframe class="cv-frame" src="' + src + '" title="CV of Aihui Wei"></iframe>';
+    return;
+  }
+  var lib = document.createElement('script');
+  lib.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+  lib.onerror = fail;
+  lib.onload = function () {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    pdfjsLib.getDocument(src).promise.then(function (pdf) {
+      box.innerHTML = '';
+      var cssWidth = box.clientWidth || 800;
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var chain = Promise.resolve();
+      for (let n = 1; n <= pdf.numPages; n++) {
+        chain = chain.then(function () {
+          return pdf.getPage(n).then(function (page) {
+            var base = page.getViewport({ scale: 1 });
+            var vp = page.getViewport({ scale: (cssWidth / base.width) * dpr });
+            var c = document.createElement('canvas');
+            c.width = vp.width; c.height = vp.height;
+            c.setAttribute('role', 'img');
+            c.setAttribute('aria-label', 'CV page ' + n + ' of ' + pdf.numPages);
+            box.appendChild(c);
+            return page.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+          });
+        });
+      }
+      return chain;
+    }).catch(fail);
+  };
+  document.head.appendChild(lib);
+})();
+</script>
+{{ end }}

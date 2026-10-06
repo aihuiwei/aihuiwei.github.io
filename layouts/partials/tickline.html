@@ -1,0 +1,102 @@
+{{/* Fed funds futures around Fed communication events, one-minute prices */}}
+<figure class="tickfig">
+  <div class="tick-tabs" role="tablist" aria-label="Fed communication event"><button type="button" role="tab" class="tick-tab" data-i="0" aria-selected="true">FOMC Statement + Press Conference</button><button type="button" role="tab" class="tick-tab" data-i="1" aria-selected="false">FOMC Minutes</button><button type="button" role="tab" class="tick-tab" data-i="2" aria-selected="false">Jackson Hole Speech</button></div>
+  <div class="tickframe">
+    <span class="tick-ytitle" aria-hidden="true">Fed Funds Futures Price</span>
+    <div class="tick-yaxis" aria-hidden="true"></div>
+    <div class="tickplot">
+      <svg class="tick-events" viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"></svg>
+      <div class="tick-reveal">
+        <svg class="tickline" viewBox="0 0 600 120" preserveAspectRatio="none" role="img" focusable="false"><polyline class="tick-path" points=""/></svg>
+        <div class="tick-pts" aria-hidden="true"></div>
+      </div>
+      <svg class="tick-hover" viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><line class="tick-cross" x1="0" y1="0" x2="0" y2="120" style="display:none"/></svg>
+      <div class="tick-labels" aria-hidden="true"></div>
+      <span class="tick-dot" hidden></span>
+      <span class="tick-tip" hidden></span>
+    </div>
+    <div class="tick-axis" aria-hidden="true"></div>
+  </div>
+  <figcaption></figcaption>
+  <noscript><p class="muted">Interactive chart of fed funds futures around Fed communication events; it needs JavaScript.</p></noscript>
+</figure>
+<script>
+(function () {
+  var fig = document.currentScript.previousElementSibling;
+  var EVENTS = [{"tab":"FOMC Statement + Press Conference","start":"13:30","marks":[[30,"Statement"],[60,"Press Conference","Press conf."]],"pts":[[0,97.71],[1,97.71],[2,97.715],[3,97.71],[5,97.71],[6,97.705],[7,97.705],[8,97.705],[10,97.705],[11,97.71],[12,97.705],[13,97.705],[14,97.705],[15,97.705],[16,97.71],[17,97.71],[18,97.71],[19,97.705],[20,97.705],[21,97.705],[23,97.705],[24,97.7],[25,97.705],[26,97.71],[27,97.705],[28,97.7],[29,97.715],[30,97.68],[31,97.67],[32,97.675],[33,97.665],[34,97.66],[35,97.655],[36,97.665],[37,97.665],[38,97.665],[39,97.665],[40,97.66],[41,97.665],[42,97.66],[43,97.665],[44,97.655],[45,97.655],[46,97.655],[47,97.655],[48,97.655],[49,97.66],[50,97.66],[51,97.665],[52,97.665],[53,97.67],[54,97.67],[55,97.67],[56,97.675],[57,97.67],[58,97.67],[59,97.665],[60,97.655],[61,97.655],[62,97.66],[63,97.66],[65,97.665],[66,97.66],[67,97.67],[68,97.775],[69,97.76],[70,97.74],[71,97.745],[72,97.745],[73,97.75],[74,97.75],[75,97.75],[76,97.755],[77,97.755],[78,97.755],[79,97.76],[80,97.755],[81,97.75],[82,97.745],[83,97.745],[84,97.72],[85,97.725],[86,97.735],[87,97.73],[88,97.73],[89,97.725],[90,97.725]],"cap":"Fed funds futures around the June 15, 2022 FOMC statement and press conference, one-minute prices (ET).","aria":"Fed funds futures price on June 15, 2022: it falls when the FOMC statement is released at 2:00 pm and jumps after the press conference begins at 2:30 pm."},{"tab":"FOMC Minutes","start":"13:30","marks":[[30,"Minutes"]],"pts":[[1,96.71],[6,96.71],[7,96.705],[8,96.705],[11,96.705],[13,96.705],[16,96.7],[17,96.7],[18,96.7],[22,96.7],[24,96.7],[25,96.7],[26,96.7],[28,96.7],[29,96.7],[30,96.69],[31,96.69],[32,96.685],[33,96.685],[34,96.685],[35,96.7],[36,96.69],[38,96.685],[42,96.69],[44,96.69],[45,96.685],[46,96.67],[47,96.675],[48,96.675],[49,96.67],[50,96.67],[51,96.675],[52,96.67],[53,96.67],[54,96.67],[56,96.67],[58,96.675],[59,96.675],[60,96.675],[61,96.675],[62,96.67],[63,96.675],[64,96.675],[65,96.68],[66,96.675],[68,96.675],[69,96.675],[70,96.68],[71,96.68],[74,96.68],[75,96.68],[76,96.68],[77,96.68],[78,96.68],[79,96.68],[81,96.68],[84,96.675],[87,96.665],[88,96.665],[89,96.665]],"cap":"Fed funds futures around the July 6, 2022 release of the June FOMC minutes, one-minute prices (ET).","aria":"Fed funds futures price on July 6, 2022: it drifts down after the FOMC minutes are released at 2:00 pm."},{"tab":"Jackson Hole Speech","start":"09:30","marks":[[30,"Speech"]],"pts":[[0,97.06],[1,97.055],[2,97.065],[3,97.06],[4,97.06],[5,97.06],[6,97.06],[7,97.055],[8,97.055],[9,97.055],[10,97.06],[12,97.055],[13,97.055],[14,97.055],[15,97.055],[16,97.055],[17,97.05],[18,97.055],[19,97.05],[21,97.05],[23,97.055],[24,97.06],[25,97.055],[26,97.055],[27,97.055],[28,97.055],[29,97.06],[30,97.045],[31,97.05],[32,97.04],[33,97.035],[34,97.035],[35,97.03],[36,97.025],[37,97.02],[38,97.025],[39,97.03],[40,97.04],[41,97.05],[42,97.04],[43,97.035],[44,97.04],[45,97.035],[46,97.035],[47,97.03],[48,97.03],[49,97.03],[50,97.03],[51,97.03],[52,97.03],[53,97.03],[54,97.03],[55,97.03],[56,97.03],[57,97.03],[58,97.03],[59,97.03],[60,97.03],[61,97.03],[62,97.035],[63,97.025],[64,97.03],[65,97.03],[66,97.035],[67,97.035],[68,97.035],[69,97.035],[70,97.035],[71,97.035],[72,97.035],[73,97.035],[74,97.035],[75,97.035],[76,97.035],[77,97.035],[78,97.035],[79,97.035],[80,97.03],[81,97.03],[82,97.03],[83,97.03],[84,97.03],[85,97.03],[86,97.025],[87,97.025],[88,97.025],[89,97.025],[90,97.03]],"cap":"Fed funds futures around Chair Powell’s Jackson Hole speech on August 26, 2022, one-minute prices (ET).","aria":"Fed funds futures price on August 26, 2022: it falls after Chair Powell’s Jackson Hole speech begins at 10:00 am."}];
+  var W = 600, H = 120, DUR = 3200;
+  var plot = fig.querySelector('.tickplot'), reveal = fig.querySelector('.tick-reveal');
+  var line = fig.querySelector('.tick-path'), lineSvg = fig.querySelector('.tickline'), pts = fig.querySelector('.tick-pts');
+  var evSvg = fig.querySelector('.tick-events'), labels = fig.querySelector('.tick-labels');
+  var yaxis = fig.querySelector('.tick-yaxis'), xaxis = fig.querySelector('.tick-axis'), cap = fig.querySelector('figcaption');
+  var cross = fig.querySelector('.tick-cross'), dot = fig.querySelector('.tick-dot'), tip = fig.querySelector('.tick-tip');
+  var tabs = fig.querySelectorAll('.tick-tab');
+  var motion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur = null, timers = [];
+
+  function clock(start, m) {
+    var t = parseInt(start, 10) * 60 + parseInt(start.slice(3), 10) + m;
+    return Math.floor(t / 60) + ':' + ('0' + t % 60).slice(-2);
+  }
+  function render(i) {
+    var e = EVENTS[i], ps = e.pts.map(function (p) { return p[1]; });
+    var lo = Math.min.apply(null, ps), hi = Math.max.apply(null, ps), pad = Math.max(0.005, (hi - lo) * 0.12);
+    lo -= pad; hi += pad;
+    var step = hi - lo > 0.1 ? 0.02 : 0.01;
+    var X = function (m) { return m / 90 * W; }, Y = function (p) { return (hi - p) / (hi - lo) * H; };
+    cur = { e: e, pts: e.pts.map(function (p) { return [p[0], p[1], X(p[0]), Y(p[1])]; }) };
+    line.setAttribute('points', cur.pts.map(function (p) { return p[2].toFixed(2) + ',' + p[3].toFixed(2); }).join(' '));
+    pts.innerHTML = cur.pts.map(function (p) { return '<i style="left:' + (p[2] / W * 100) + '%;top:' + (p[3] / H * 100) + '%"></i>'; }).join('');
+    evSvg.innerHTML = e.marks.map(function (k) { return '<line class="tick-event" x1="' + X(k[0]) + '" y1="0" x2="' + X(k[0]) + '" y2="' + H + '"/>'; }).join('');
+    labels.innerHTML = e.marks.map(function (k) { return '<span class="tick-label" style="left:' + (k[0] / 90 * 100) + '%">' + (k[2] ? '<span class="tl-full">' + k[1] + '</span><span class="tl-short">' + k[2] + '</span>' : k[1]) + '</span>'; }).join('');
+    var ys = '';
+    for (var v = Math.ceil(lo / step - 1e-9) * step; v <= hi + 1e-9; v += step) ys += '<span style="top:' + (Y(v) / H * 100) + '%">' + v.toFixed(2) + '</span>';
+    yaxis.innerHTML = ys;
+    var xs = '';
+    for (var m = 0; m <= 90; m += 10) xs += '<span style="left:' + (m / 90 * 100) + '%">' + clock(e.start, m) + '</span>';
+    xaxis.innerHTML = xs;
+    cap.textContent = e.cap;
+    lineSvg.setAttribute('aria-label', e.aria);
+    tabs.forEach(function (t, j) { t.setAttribute('aria-selected', j === i ? 'true' : 'false'); t.tabIndex = j === i ? 0 : -1; });
+    hide();
+  }
+  function play() {
+    timers.forEach(clearTimeout); timers = [];
+    var marks = labels.querySelectorAll('.tick-label'), evLines = evSvg.querySelectorAll('.tick-event');
+    if (!motion) { reveal.classList.remove('drawing'); return; }
+    reveal.classList.remove('drawing'); void reveal.offsetWidth; reveal.classList.add('drawing');
+    cur.e.marks.forEach(function (k, j) {
+      [marks[j], evLines[j]].forEach(function (el) { el.classList.remove('flash'); });
+      timers.push(setTimeout(function () { marks[j].classList.add('flash'); evLines[j].classList.add('flash'); }, k[0] / 90 * DUR + 150));
+    });
+  }
+  function show(clientX) {
+    var r = plot.getBoundingClientRect(), vx = (clientX - r.left) / r.width * W, best = cur.pts[0];
+    for (var i = 1; i < cur.pts.length; i++) if (Math.abs(cur.pts[i][2] - vx) < Math.abs(best[2] - vx)) best = cur.pts[i];
+    var px = best[2] / W * 100, py = best[3] / H * 100;
+    cross.setAttribute('x1', best[2]); cross.setAttribute('x2', best[2]); cross.style.display = '';
+    dot.style.left = px + '%'; dot.style.top = py + '%'; dot.hidden = false;
+    tip.textContent = clock(cur.e.start, best[0]) + '  ' + best[1].toFixed(3);
+    tip.style.left = px + '%'; tip.classList.toggle('flip', px > 80); tip.hidden = false;
+  }
+  function hide() { cross.style.display = 'none'; dot.hidden = tip.hidden = true; }
+  plot.addEventListener('pointermove', function (ev) { show(ev.clientX); });
+  plot.addEventListener('pointerleave', hide);
+  tabs.forEach(function (t, j) {
+    t.addEventListener('click', function () { render(j); play(); });
+    t.addEventListener('keydown', function (ev) {
+      if (ev.key !== 'ArrowRight' && ev.key !== 'ArrowLeft') return;
+      var k = (j + (ev.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+      tabs[k].focus(); render(k); play();
+    });
+  });
+
+  render(0);
+  if (!motion || !('IntersectionObserver' in window)) return;
+  reveal.classList.add('waiting');
+  var io = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { reveal.classList.remove('waiting'); play(); io.disconnect(); }
+  }, { threshold: 0.5 });
+  io.observe(plot);
+})();
+</script>

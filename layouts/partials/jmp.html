@@ -1,0 +1,17 @@
+{{ $j := site.Data.jmp }}
+<article class="jmp">
+  <p class="kicker">Job Market Paper</p>
+  <h3 class="jmp-title">{{ $j.title }}</h3>
+  <p class="paper-meta">
+    {{ $j.status }}
+    {{ range $j.links }}{{ if .url }}<a class="paper-link" href="{{ .url | relURL }}">{{ .name }}</a>{{ end }}{{ end }}
+  </p>
+  {{ if .full }}
+    <p class="abstract">{{ $j.abstract }}</p>
+  {{ else }}
+    <details class="abstract-toggle">
+      <summary>Abstract</summary>
+      <p class="abstract">{{ $j.abstract }}</p>
+    </details>
+  {{ end }}
+</article>

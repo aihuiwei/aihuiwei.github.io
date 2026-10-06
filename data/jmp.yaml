@@ -1,0 +1,12 @@
+title: "Fedspeak, LLM-Derived Signals, and High-Frequency Trading"
+links:
+  - name: "SSRN"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7479619"
+abstract: >-
+  This paper studies how financial markets respond to changes in Federal Reserve communication
+  beyond conventional monetary policy surprises. I develop an LLM-based Communication Divergence
+  Signal that measures semantic and tonal shifts across FOMC statements, minutes, and press
+  conferences. Using a high-frequency event-study design with futures data, I show that communication
+  divergence generates sizable and persistent movements in Treasury yields and trading activity across
+  the yield curve. The effects are stronger after 2020, suggesting that markets have become more
+  responsive to differences in how the Fed communicates its policy outlook.
