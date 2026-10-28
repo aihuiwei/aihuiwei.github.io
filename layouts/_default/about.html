@@ -8,9 +8,9 @@
   <div class="gallery">
     {{ range $i, $p := site.Data.photos }}
       {{ $r := div (float $p.w) $p.h }}
-      <figure style="--r: {{ $r }}">
+      <figure style="--r: {{ $r }}"{{ if $p.wide }} class="wide"{{ end }}>
         <a href="{{ printf "/img/photos/%s.jpg" $p.file | relURL }}" data-index="{{ $i }}" data-caption="{{ $p.caption }}">
-          <img src="{{ printf "/img/photos/%s-sm.jpg" $p.file | relURL }}" alt="{{ $p.caption }}" width="{{ $p.w }}" height="{{ $p.h }}" loading="{{ if lt $i 3 }}eager{{ else }}lazy{{ end }}" decoding="async">
+          <img src="{{ printf (cond (default false $p.wide) "/img/photos/%s.jpg" "/img/photos/%s-sm.jpg") $p.file | relURL }}" alt="{{ $p.caption }}" width="{{ $p.w }}" height="{{ $p.h }}" loading="{{ if lt $i 3 }}eager{{ else }}lazy{{ end }}" decoding="async">
         </a>
         <figcaption>{{ $p.caption }}</figcaption>
       </figure>
