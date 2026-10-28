@@ -5,8 +5,8 @@
 - year: 2026
   items:
     - { name: "LACEA–LAMES of the Econometric Society", place: "Lima, Peru", scheduled: true }
-    - { name: "FMA Annual Meeting", place: "Tampa, USA", scheduled: true }
-    - { name: "AI in Finance Conference", place: "Montréal, Canada", scheduled: true }
+    - { name: "FMA Annual Meeting", place: "Tampa, USA" }
+    - { name: "AI in Finance Conference", place: "Montréal, Canada" }
     - { name: "Money, Macro and Finance (MMF) Annual Conference", place: "Lancaster, UK" }
     - { name: "North American Summer Meeting of the Econometric Society", place: "Atlanta, USA" }
     - { name: "IAAE Annual Conference", place: "Lisbon, Portugal" }
