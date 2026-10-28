@@ -37,3 +37,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
   name = "CV"
   url = "/cv/"
   weight = 4
+[[menus.main]]
+  name = "About"
+  url = "/about/"
+  weight = 5
