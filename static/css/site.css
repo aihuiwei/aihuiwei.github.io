@@ -225,7 +225,7 @@ h2 { color: var(--brand); font-family: var(--sans); font-size: 1rem; font-weight
 
 /* photo gallery: justified rows, each photo keeps its aspect ratio (--r = w/h) */
 .gallery { display: flex; flex-wrap: wrap; gap: 2rem 1.25rem; margin-top: 2.75rem; padding-top: 2.75rem; border-top: 1px solid var(--rule); }
-.gallery figure { margin: 0; flex: calc(var(--r) * 100) 1 calc(var(--r) * 24rem); }
+.gallery figure { margin: 0; flex: calc(var(--r) * 100) 1 calc(var(--r) * 41%); }
 .gallery a { display: block; }
 .gallery img { display: block; width: 100%; height: auto; aspect-ratio: var(--r); object-fit: cover; border-radius: 2px; background: var(--card); transition: opacity 0.15s; }
 .gallery a:hover img { opacity: 0.88; }

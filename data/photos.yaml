@@ -1,12 +1,13 @@
 # file = basename in static/img/photos/ (full size: <file>.jpg, thumbnail: <file>-sm.jpg); w/h = full-size pixels
-- { file: "central-park-snow", caption: "Central Park in snow · New York", w: 1500, h: 2000 }
 - { file: "porto-bridge", caption: "Dom Luís I Bridge at dusk · Porto", w: 2000, h: 1500 }
+- { file: "empire-state-dusk", caption: "Empire State Building at dusk · New York", w: 1500, h: 2000 }
+- { file: "central-park-snow", caption: "Central Park in snow · New York", w: 1500, h: 2000 }
 - { file: "dog-parade", caption: "Halloween Dog Parade · New York", w: 1080, h: 1616 }
 - { file: "lake-mendota-liberty", caption: "Lady Liberty on frozen Lake Mendota · Madison", w: 2000, h: 1500 }
+- { file: "staten-island-blossoms", caption: "Cherry blossoms · Staten Island, New York", w: 1583, h: 2000 }
 - { file: "antelope-canyon", caption: "Antelope Canyon · Arizona", w: 1500, h: 2000 }
 - { file: "madison-pier", caption: "Snowfall on the pier · Madison", w: 2000, h: 1499 }
-- { file: "staten-island-blossoms", caption: "Cherry blossoms · Staten Island, New York", w: 1583, h: 2000 }
-- { file: "washington-monument", caption: "Washington Monument · Washington, DC", w: 1616, h: 1080 }
 - { file: "lisbon-rooftops", caption: "Rooftops · Lisbon", w: 1500, h: 2000 }
+- { file: "washington-monument", caption: "Washington Monument · Washington, DC", w: 1616, h: 1080 }
 - { file: "porto-street", caption: "Festival streets · Porto", w: 1500, h: 2000 }
 - { file: "westminster-abbey", caption: "Westminster Abbey · London", w: 1500, h: 2000 }
